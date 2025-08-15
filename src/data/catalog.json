@@ -1,0 +1,582 @@
+[
+  {
+    "term": "churn rate",
+    "definition": "Churn Rate é o percentual de clientes que cancelam o serviço em um período determinado.",
+    "reports": [
+      "Relatório de Cancelamentos Mensais",
+      "Relatório de Motivos de Cancelamento",
+      "Análise de Retenção de Clientes por Região",
+      "Dashboard de Customer Success"
+    ],
+    "tables": [
+      { "name": "clientes_historico" },
+      { "name": "transacoes" },
+      { "name": "motivos_cancelamento", "description": "Classificação dos motivos registrados no cancelamento" }
+    ],
+    "refinements": [
+      "Base Clientes",
+      "Transações",
+      "Pesquisas de Satisfação",
+      "Suporte Técnico",
+      "Campanhas de Retenção"
+    ]
+  },
+  {
+    "term": "preço médio por litro",
+    "definition": "Preço médio do combustível vendido por litro em determinado período ou posto.",
+    "reports": [
+      "Relatório de Preço Médio Mensal",
+      "Comparativo de Preços por Região",
+      "Dashboard Comercial"
+    ],
+    "tables": [
+      { "name": "vendas" },
+      { "name": "precos_combustivel" }
+    ],
+    "refinements": [
+      "Gestão de Preços",
+      "Campanhas Promocionais",
+      "Negociação com Fornecedores"
+    ]
+  },
+  {
+    "term": "abastecimento por cliente",
+    "definition": "Registro detalhado de cada abastecimento realizado por cliente individual ou corporativo.",
+    "reports": [
+      "Relatório de Abastecimentos Diários",
+      "Análise de Consumo por Cliente",
+      "Dashboard Operacional"
+    ],
+    "tables": [
+      { "name": "abastecimentos" },
+      { "name": "clientes_historico" }
+    ],
+    "refinements": [
+      "Gestão de Frota",
+      "Programas de Fidelidade",
+      "Alertas de Consumo"
+    ]
+  },
+  {
+    "term": "ticket médio por loja",
+    "definition": "Valor médio gasto pelos clientes em produtos ou serviços de cada loja de conveniência.",
+    "reports": [
+      "Relatório de Ticket Médio por Loja",
+      "Comparativo Mensal de Vendas",
+      "Dashboard Financeiro"
+    ],
+    "tables": [
+      { "name": "vendas_loja" },
+      { "name": "clientes_historico" }
+    ],
+    "refinements": [
+      "Campanhas Promocionais",
+      "Gestão de Estoque",
+      "Segmentação de Clientes"
+    ]
+  },
+  {
+    "term": "indicador de disponibilidade",
+    "definition": "Mede a disponibilidade de combustível e produtos em cada posto.",
+    "reports": [
+      "Relatório de Estoque Diário",
+      "Análise de Rupturas",
+      "Dashboard Operacional"
+    ],
+    "tables": [
+      { "name": "estoque" },
+      { "name": "abastecimentos" }
+    ],
+    "refinements": [
+      "Gestão de Fornecedores",
+      "Planejamento Logístico",
+      "Previsão de Demanda"
+    ]
+  },
+  {
+    "term": "rentabilidade por produto",
+    "definition": "Avalia o lucro gerado por cada produto ou serviço oferecido.",
+    "reports": [
+      "Relatório de Margem por Produto",
+      "Análise de Rentabilidade Mensal",
+      "Dashboard Financeiro"
+    ],
+    "tables": [
+      { "name": "vendas" },
+      { "name": "custos" }
+    ],
+    "refinements": [
+      "Preços de Venda",
+      "Gestão de Custos",
+      "Campanhas Promocionais"
+    ]
+  },
+  {
+    "term": "consumo por região",
+    "definition": "Quantidade de combustível vendida por região geográfica em determinado período.",
+    "reports": [
+      "Relatório Regional de Vendas",
+      "Análise Comparativa por Região",
+      "Dashboard Comercial"
+    ],
+    "tables": [
+      { "name": "vendas" },
+      { "name": "clientes_historico" }
+    ],
+    "refinements": [
+      "Campanhas Promocionais",
+      "Gestão de Estoque",
+      "Expansão de Postos"
+    ]
+  },
+  {
+    "term": "rotatividade de estoque",
+    "definition": "Mede a velocidade com que os produtos e combustíveis são vendidos e repostos.",
+    "reports": [
+      "Relatório de Rotatividade Mensal",
+      "Controle de Estoque",
+      "Dashboard Logístico"
+    ],
+    "tables": [
+      { "name": "estoque" },
+      { "name": "vendas" }
+    ],
+    "refinements": [
+      "Gestão de Estoque",
+      "Planejamento Logístico",
+      "Negociação com Fornecedores"
+    ]
+  },
+  {
+    "term": "abastecimento de emergência",
+    "definition": "Controle e registro de abastecimentos realizados fora da programação regular devido a falta de estoque.",
+    "reports": [
+      "Relatório de Abastecimentos de Emergência",
+      "Análise de Rupturas",
+      "Dashboard Operacional"
+    ],
+    "tables": [
+      { "name": "abastecimentos" },
+      { "name": "estoque" }
+    ],
+    "refinements": [
+      "Gestão de Fornecedores",
+      "Planejamento Logístico",
+      "Alertas Automáticos"
+    ]
+  },
+  {
+    "term": "campanhas promocionais",
+    "definition": "Ações de marketing voltadas para aumentar vendas, fidelizar clientes ou reduzir estoque.",
+    "reports": [
+      "Relatório de Performance de Campanhas",
+      "Análise de Conversão por Campanha",
+      "Dashboard Comercial"
+    ],
+    "tables": [
+      { "name": "campanhas" },
+      { "name": "vendas" }
+    ],
+    "refinements": [
+      "Segmentação de Clientes",
+      "Programas de Fidelidade",
+      "Gestão de Estoque"
+    ]
+  },
+  {
+    "term": "ticket médio por combustível",
+    "definition": "Valor médio gasto pelos clientes na compra de cada tipo de combustível.",
+    "reports": [
+      "Relatório de Ticket Médio por Combustível",
+      "Análise de Margem por Combustível",
+      "Dashboard Financeiro"
+    ],
+    "tables": [
+      { "name": "vendas_combustivel" },
+      { "name": "clientes_historico" }
+    ],
+    "refinements": [
+      "Campanhas Promocionais",
+      "Gestão de Preços",
+      "Segmentação de Clientes"
+    ]
+  },
+  {
+    "term": "desempenho de loja",
+    "definition": "Avaliação do desempenho de vendas e operações de cada loja ou posto.",
+    "reports": [
+      "Relatório de Performance por Loja",
+      "Análise de Vendas Mensal",
+      "Dashboard Operacional"
+    ],
+    "tables": [
+      { "name": "vendas_loja" },
+      { "name": "estoque" }
+    ],
+    "refinements": [
+      "Treinamento de Equipe",
+      "Campanhas Promocionais",
+      "Gestão de Estoque"
+    ]
+  },
+  {
+    "term": "lead time de reposição",
+    "definition": "Tempo necessário para repor o estoque de combustíveis ou produtos após pedido ao fornecedor.",
+    "reports": [
+      "Relatório de Lead Time",
+      "Controle de Estoque",
+      "Dashboard Logístico"
+    ],
+    "tables": [
+      { "name": "estoque" },
+      { "name": "fornecedores" }
+    ],
+    "refinements": [
+      "Planejamento Logístico",
+      "Gestão de Fornecedores",
+      "Previsão de Demanda"
+    ]
+  },
+  {
+    "term": "desvio de estoque",
+    "definition": "Diferença entre o estoque registrado e o estoque real disponível, indicando perdas ou inconsistências.",
+    "reports": [
+      "Relatório de Desvios de Estoque",
+      "Auditoria de Estoque",
+      "Dashboard Operacional"
+    ],
+    "tables": [
+      { "name": "estoque" },
+      { "name": "abastecimentos" }
+    ],
+    "refinements": [
+      "Controle Interno",
+      "Auditorias Periódicas",
+      "Treinamento de Equipe"
+    ]
+  },
+  {
+    "term": "rota de abastecimento",
+    "definition": "Planejamento das rotas para entrega de combustíveis ou produtos aos postos.",
+    "reports": [
+      "Relatório de Rota Diária",
+      "Análise de Eficiência Logística",
+      "Dashboard de Transporte"
+    ],
+    "tables": [
+      { "name": "rotas" },
+      { "name": "abastecimentos" }
+    ],
+    "refinements": [
+      "Planejamento Logístico",
+      "Otimização de Rotas",
+      "Gestão de Frota"
+    ]
+  },
+  {
+    "term": "vendas por categoria",
+    "definition": "Volume ou valor de vendas segmentado por categoria de produtos ou serviços.",
+    "reports": [
+      "Relatório de Vendas por Categoria",
+      "Dashboard Comercial",
+      "Análise de Performance Mensal"
+    ],
+    "tables": [
+      { "name": "vendas" },
+      { "name": "produtos" }
+    ],
+    "refinements": [
+      "Campanhas Promocionais",
+      "Gestão de Estoque",
+      "Segmentação de Clientes"
+    ]
+  },
+  {
+    "term": "eficiência operacional",
+    "definition": "Mede a produtividade e eficiência dos processos internos, incluindo atendimento e logística.",
+    "reports": [
+      "Relatório de Performance Operacional",
+      "Dashboard Operacional",
+      "Análise de Indicadores"
+    ],
+    "tables": [
+      { "name": "processos" },
+      { "name": "abastecimentos" }
+    ],
+    "refinements": [
+      "Treinamento de Equipe",
+      "Otimização de Processos",
+      "Redução de Custos"
+    ]
+  },
+  {
+    "term": "rotatividade de clientes",
+    "definition": "Mede a frequência de saída e entrada de clientes em determinado período.",
+    "reports": [
+      "Relatório de Retenção de Clientes",
+      "Análise de Churn",
+      "Dashboard de Customer Success"
+    ],
+    "tables": [
+      { "name": "clientes_historico" },
+      { "name": "transacoes" }
+    ],
+    "refinements": [
+      "Programas de Fidelidade",
+      "Campanhas de Retenção",
+      "Pesquisas de Satisfação"
+    ]
+  },
+  {
+    "term": "lucro líquido",
+    "definition": "Resultado financeiro final após deduzir todos os custos e despesas.",
+    "reports": [
+      "Relatório de Lucro Mensal",
+      "Análise de Rentabilidade",
+      "Dashboard Financeiro"
+    ],
+    "tables": [
+      { "name": "vendas" },
+      { "name": "custos" }
+    ],
+    "refinements": [
+      "Gestão Financeira",
+      "Planejamento de Custos",
+      "Estratégias Comerciais"
+    ]
+  },
+  {
+    "term": "desconto corporativo",
+    "definition": "Redução de preço concedida a clientes corporativos ou frotas parceiras.",
+    "reports": [
+      "Relatório de Descontos Aplicados",
+      "Análise de Rentabilidade",
+      "Dashboard Comercial"
+    ],
+    "tables": [
+      { "name": "clientes_corporativos" },
+      { "name": "vendas" }
+    ],
+    "refinements": [
+      "Gestão de Preços",
+      "Negociação com Clientes",
+      "Programas de Fidelidade"
+    ]
+  },
+  {
+    "term": "abastecimento programado",
+    "definition": "Registro de fornecimento de combustível agendado conforme contrato ou demanda prevista.",
+    "reports": [
+      "Relatório de Abastecimentos Programados",
+      "Controle de Consumo por Cliente",
+      "Dashboard Operacional"
+    ],
+    "tables": [
+      { "name": "abastecimentos" },
+      { "name": "clientes_corporativos" }
+    ],
+    "refinements": [
+      "Gestão de Frota",
+      "Monitoramento de Consumo",
+      "Alertas Automáticos"
+    ]
+  },
+  {
+    "term": "análise de vendas diárias",
+    "definition": "Estudo do volume e valor de vendas realizado diariamente em cada ponto de venda.",
+    "reports": [
+      "Relatório Diário de Vendas",
+      "Dashboard Comercial",
+      "Comparativo Diário"
+    ],
+    "tables": [
+      { "name": "vendas" },
+      { "name": "clientes_historico" }
+    ],
+    "refinements": [
+      "Campanhas Promocionais",
+      "Gestão de Estoque",
+      "Treinamento de Equipe"
+    ]
+  },
+  {
+    "term": "produtividade por funcionário",
+    "definition": "Mede o desempenho individual de cada colaborador em vendas e atendimento.",
+    "reports": [
+      "Relatório de Performance Individual",
+      "Análise de Eficiência Operacional",
+      "Dashboard de Recursos Humanos"
+    ],
+    "tables": [
+      { "name": "funcionarios" },
+      { "name": "vendas" }
+    ],
+    "refinements": [
+      "Treinamento de Equipe",
+      "Incentivos",
+      "Controle de Jornada"
+    ]
+  },
+  {
+    "term": "margem por canal de venda",
+    "definition": "Lucro obtido em cada canal de venda, como postos, lojas ou vendas corporativas.",
+    "reports": [
+      "Relatório de Margem por Canal",
+      "Dashboard Financeiro",
+      "Análise Comparativa"
+    ],
+    "tables": [
+      { "name": "vendas" },
+      { "name": "custos" }
+    ],
+    "refinements": [
+      "Gestão de Preços",
+      "Campanhas Promocionais",
+      "Estratégia Comercial"
+    ]
+  },
+  {
+    "term": "previsão de demanda",
+    "definition": "Estimativa de consumo de combustível e produtos para planejamento logístico e estoque.",
+    "reports": [
+      "Relatório de Previsão Mensal",
+      "Dashboard Logístico",
+      "Análise Comparativa"
+    ],
+    "tables": [
+      { "name": "vendas" },
+      { "name": "estoque" }
+    ],
+    "refinements": [
+      "Gestão de Estoque",
+      "Planejamento Logístico",
+      "Negociação com Fornecedores"
+    ]
+  },
+  {
+    "term": "rota otimizada",
+    "definition": "Planejamento logístico que reduz tempo e custo de entrega aos postos.",
+    "reports": [
+      "Relatório de Rotas Otimizadas",
+      "Dashboard Logístico",
+      "Análise de Eficiência"
+    ],
+    "tables": [
+      { "name": "rotas" },
+      { "name": "abastecimentos" }
+    ],
+    "refinements": [
+      "Planejamento Logístico",
+      "Gestão de Frota",
+      "Redução de Custos"
+    ]
+  },
+  {
+    "term": "ticket médio por conveniência",
+    "definition": "Valor médio gasto pelos clientes em produtos da loja de conveniência.",
+    "reports": [
+      "Relatório de Ticket Médio Loja",
+      "Análise de Vendas por Categoria",
+      "Dashboard Financeiro"
+    ],
+    "tables": [
+      { "name": "vendas_loja" },
+      { "name": "clientes_historico" }
+    ],
+    "refinements": [
+      "Campanhas Promocionais",
+      "Gestão de Estoque",
+      "Segmentação de Clientes"
+    ]
+  },
+  {
+    "term": "vendas online",
+    "definition": "Transações de produtos ou combustíveis realizadas por canais digitais.",
+    "reports": [
+      "Relatório de Vendas Online",
+      "Dashboard Comercial",
+      "Análise de Conversão Digital"
+    ],
+    "tables": [
+      { "name": "vendas_online" },
+      { "name": "clientes_historico" }
+    ],
+    "refinements": [
+      "Campanhas Digitais",
+      "Programas de Fidelidade",
+      "Gestão de Estoque"
+    ]
+  },
+  {
+    "term": "cross-selling",
+    "definition": "Estratégia de venda de produtos adicionais aos clientes no ponto de venda ou online.",
+    "reports": [
+      "Relatório de Produtos Vendidos Juntos",
+      "Análise de Conversão",
+      "Dashboard Comercial"
+    ],
+    "tables": [
+      { "name": "vendas" },
+      { "name": "clientes_historico" }
+    ],
+    "refinements": [
+      "Treinamento de Equipe",
+      "Campanhas Promocionais",
+      "Segmentação de Clientes"
+    ]
+  },
+  {
+    "term": "up-selling",
+    "definition": "Estratégia de aumentar o valor da venda oferecendo produtos ou serviços superiores.",
+    "reports": [
+      "Relatório de Up-selling",
+      "Análise de Conversão",
+      "Dashboard Comercial"
+    ],
+    "tables": [
+      { "name": "vendas" },
+      { "name": "clientes_historico" }
+    ],
+    "refinements": [
+      "Treinamento de Equipe",
+      "Campanhas Promocionais",
+      "Segmentação de Clientes"
+    ]
+  },
+  {
+    "term": "índice de satisfação do cliente",
+    "definition": "Mede a satisfação dos clientes com produtos, serviços e atendimento.",
+    "reports": [
+      "Relatório de Pesquisa de Satisfação",
+      "Dashboard de Customer Success",
+      "Análise de Feedback"
+    ],
+    "tables": [
+      { "name": "pesquisas_satisfacao" },
+      { "name": "clientes_historico" }
+    ],
+    "refinements": [
+      "Campanhas de Retenção",
+      "Suporte Técnico",
+      "Programas de Fidelidade"
+    ]
+  },
+  {
+    "term": "vendas por canal digital",
+    "definition": "Volume ou valor de vendas realizadas através de aplicativos, e-commerce ou portais digitais.",
+    "reports": [
+      "Relatório de Vendas Digitais",
+      "Análise de Conversão Online",
+      "Dashboard Comercial"
+    ],
+    "tables": [
+      { "name": "vendas_online" },
+      { "name": "clientes_historico" }
+    ],
+    "refinements": [
+      "Campanhas Digitais",
+      "Programas de Fidelidade",
+      "Segmentação de Clientes"
+    ]
+  }
+]
